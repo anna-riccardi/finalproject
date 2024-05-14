@@ -26,10 +26,10 @@
                 content: url(calender.jpeg);
             }
             50% {
-                content: url(may.jpeg);
+                content: url(dec.jpeg);
             }
             100% {
-                content: url(calender.jpeg);
+                content: url(may.jpeg);
             }
         }
     </style>

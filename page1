@@ -14,7 +14,7 @@
         }
         .top-text {
             position: absolute;
-            top: 10%;
+            top: 28%;
             left: 50%;
             transform: translateX(-50%);
             color: white;
