@@ -14,14 +14,14 @@
         }
         .top-text {
             position: absolute;
-            top: 28%;
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
             color: white;
             font-size: 18px;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
-            max-width: 28%; /* Adjust the width as needed */
+            max-width: 28%;
             margin: 0 auto; /* Center the text box horizontally */
         }
         .bottom-text {
