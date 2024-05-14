@@ -1,1 +1,99 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiraling Towards Nothingness</title>
+    <style>
+        body {
+            background: #e6f3f8;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            font-size: 24px;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .window-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .window {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            width: 600px;
+            height: 400px;
+            background-image: url('spring.jpeg');
+            background-size: cover;
+            transition: background-image 1s ease-in-out;
+            border: 6px solid #8b4513; /* Dark brown border */
+            z-index: 1;
+        }
+
+        .horizontal-line {
+            position: absolute;
+            top: 250px;
+            left: 100px;
+            width: 610px;
+            height: 12px;
+            background-color: #8b4513;
+            z-index: 2;
+        }
+
+        .vertical-line {
+            position: absolute;
+            top: 50px;
+            left: 400px;
+            width: 12px;
+            height: 410px;
+            background-color: #8b4513;
+            z-index: 2;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="window-container">
+        <div class="window"></div>
+        <div class="horizontal-line"></div>
+        <div class="vertical-line"></div>
+
+
+
+    <script>
+        const windowElement = document.querySelector('.window');
+
+        // Array of background images for each season
+        const seasons = ['spring.jpeg', 'summer.jpeg', 'fall.jpeg', 'winter.jpeg'];
+        let seasonIndex = 0;
+
+        function changeSeason() {
+            // Change the background image of the window to the next season
+            windowElement.style.backgroundImage = `url(${seasons[seasonIndex]})`;
+
+            // Increment seasonIndex or reset to 0 if it exceeds the array length
+            seasonIndex = (seasonIndex + 1) % seasons.length;
+
+            // Repeat the process every 3 seconds
+            setTimeout(changeSeason, 2000);
+        }
+
+        // Start changing the season immediately
+        changeSeason();
+    </script>
+</body>
+</html>
