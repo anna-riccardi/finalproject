@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiraling Towards Nothingness</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            font-size: 48px;
+        }
+
+        #countdown {
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">85 Years</div>
+
+    <script>
+        let years = 85;
+        const countdownElement = document.getElementById('countdown');
+
+        function countdown() {
+            years--;
+            if (years >= 0) {
+                countdownElement.textContent = years + " Years";
+                setTimeout(countdown, 50); // Adjust the timeout for faster or slower countdown
+            } else {
+                countdownElement.classList.add('hidden');
+                setTimeout(() => {
+                    countdownElement.textContent = "And just like that, the time has run out.";
+                    const link = document.createElement('a');
+                    link.href = "page2.html";
+                    link.textContent = "how can one possibly cope with that?";
+                    countdownElement.appendChild(document.createElement('br'));
+                    countdownElement.appendChild(link);
+                }, 1000); // Delay the transition for 1 second
+            }
+        }
+
+        countdown();
+    </script>
+</body>
+</html>

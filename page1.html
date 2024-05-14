@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIF Page</title>
     <style>
-        .container {
-            position: relative;
-            text-align: center;
+        body {
+            background-color: #f7f7f7; /* Background color */
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            margin-top: 50px; /* Added margin for better spacing */
         }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
         .top-text {
             position: absolute;
             top: 28%;
@@ -22,13 +27,19 @@
             background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
             max-width: 28%;
-            margin: 0 auto; /* Center the text box horizontally */
+            margin: 0 auto;
         }
+
         .bottom-text {
             color: black;
             font-size: 18px;
-            max-width: 40%; /* Adjust the width as needed */
-            margin: 20px auto; /* Added margin for better spacing and centering */
+            max-width: 40%;
+            margin: 20px auto;
+        }
+
+        .last-line {
+            font-style: italic;
+            color: #009688; /* Link color */
         }
     </style>
 </head>
@@ -36,7 +47,7 @@
     <div class="container">
         <img src="https://media.giphy.com/media/d3yxg15kJppJilnW/giphy.gif" alt="Time Clock GIF">
         <div class="top-text">I can’t handle the passage of time and so I cling to the idea that just for me, it stands still.</div>
-      <div class="bottom-text">That minutes and hours and days and years are fickle constructs, meant to satiate my body but not my mind. I pretend that time doesn't pass, because if it has not moved then I can pretend that she is not gone and that they all still want to be my friend and that my childhood hasn’t slipped from my grasp and that I am okay with it <a href="page2.html">all</a>.</div>
-</div>
+        <div class="bottom-text">That minutes and hours and days and years are fickle constructs, meant to satiate my body but not my mind. I pretend that time doesn't pass, because if it has not moved then I can pretend. Pretend that she is not gone and that they all still want to be my friend and that my childhood hasn’t slipped from my grasp and that I am okay with it <span class="last-line"><a href="page2.html">all</a>.</span></div>
+    </div>
 </body>
 </html>

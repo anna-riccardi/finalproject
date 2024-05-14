@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stagnant-ness</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #f7f7f7; /* Background color */
+            margin: 0;
+            padding: 0;
+            font-family: 'Permanent Marker', cursive; /* Permanent Marker font */
+        }
+
+        .polaroid {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 240px; /* Adjust the maximum width as needed */
+        }
+
+        .polaroid::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 1px solid #000;
+            width: 50px;
+            height: 5px;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 16px; /* Adjust the font size as needed */
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .polaroid img {
+            max-width: 100%; /* Make sure the image fits within the polaroid */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="polaroid">
+        <img src="car.jpeg" alt="Image 1">
+        <p class="caption">I haven’t changed my calendar, because when the stagnant-ness has a physical manifestation, I can pretend it is real.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="prom.jpeg" alt="Image 2">
+        <p class="caption">Because if the calendar is frozen on a single date, maybe, just maybe, I can preserve a moment that has already slipped away.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="ouch.jpeg" alt="Image 3">
+        <p class="caption">I can pretend that the friends from that polaroid photos in the coffee tin under my bed still linger there.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="daisy.jpeg" alt="Image 4">
+        <p class="caption">I can pretend that she is still here, that her presence still echoes around me.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="grad.jpeg" alt="Image 5">
+        <p class="caption">I can pretend I can revisit that unyielding sense of self I had as a child before the unknowns of adulthood took hold.</p>
+    </div>
+
+    <div class="polaroid">
+        <a href="page4.html"><img src="party.jpeg" alt="Image 6"></a>
+        <p class="caption"> That nothing is different, and <a href="page4.html"> everything is the same.</a></p>
+    </div>
+</body>
+</html>

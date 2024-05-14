@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,42 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Static Text with Glitching Image</title>
     <style>
+        body {
+            background-color: #f7f7f7; /* Background color */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .text-container {
             text-align: center;
             font-size: 24px;
-            font-family: Arial, sans-serif;
             margin-top: 50px;
         }
+
         .image-container {
             text-align: center;
             margin-top: 20px;
         }
+
         #rotatingImage {
             max-width: 70%; /* Adjust the size as needed */
             height: auto;
-            animation: glitch 0.6s infinite alternate;
+            animation: glitch 5s infinite alternate; /* Adjusted animation duration for calendars */
         }
-        @keyframes glitch {
-            0% {
-                content: url(calender.jpeg);
-            }
-            50% {
-                content: url(dec.jpeg);
-            }
-            100% {
-                content: url(may.jpeg);
-            }
+
+
         }
     </style>
 </head>
 <body>
     <div class="text-container">
-        <!-- static text goes here -->
-        <span>Okay with the dizzying spiral. Okay with unyielding march towards nothingness. Okay with calendars that have to change from November to December, year in and year out.</span>
+        <!-- Static text with links -->
+        <span>Okay with looking at my wall in May and seeing a calendar that reads November.<br>
+        Okay with the <a href="page3b.html" style="color: #009688;">dizzying spiral</a>.<br>
+        Okay with unyielding <a href="page3a.html" style="color: #009688;">march towards nothingness</a>.<br>
     </div>
     <div class="image-container">
         <img src="calender.jpeg" alt="Image" id="rotatingImage">
     </div>
+    <div class="text-container">
+
+        Okay with calendars that have to change from November to December, year in and year out.</span>
 
 </body>
 </html>
