@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Text with Glitching Image</title>
+    <style>
+        .text-container {
+            text-align: center;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #rotatingImage {
+            max-width: 70%; /* Adjust the size as needed */
+            height: auto;
+            animation: glitch 0.6s infinite alternate;
+        }
+        @keyframes glitch {
+            0% {
+                content: url(calender.jpeg);
+            }
+            50% {
+                content: url(may.jpeg);
+            }
+            100% {
+                content: url(calender.jpeg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <!-- static text goes here -->
+        <span>Okay with the dizzying spiral. Okay with unyielding march towards nothingness. Okay with calendars that have to change from November to December, year in and year out.</span>
+    </div>
+    <div class="image-container">
+        <img src="calender.jpeg" alt="Image" id="rotatingImage">
+    </div>
+
+</body>
+</html>
