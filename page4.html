@@ -38,41 +38,61 @@
             z-index: 1;
         }
 
+
+
+
         .horizontal-line {
+                  position: absolute;
+                  top: 250px;
+                  left: 100px;
+                  width: 610px;
+                  height: 12px;
+                  background-color: #8b4513;
+                  z-index: 2;
+              }
+
+              .vertical-line {
+                  position: absolute;
+                  top: 50px;
+                  left: 400px;
+                  width: 12px;
+                  height: 410px;
+                  background-color: #8b4513;
+                  z-index: 2;
+              }
+
+        .text {
+            color: #8b4513; /* Dark brown color */
+            font-size: 14px;
             position: absolute;
-            top: 250px;
-            left: 100px;
-            width: 610px;
-            height: 12px;
-            background-color: #8b4513;
-            z-index: 2;
+            top: 470px;
+            left: 200px;
+            width: 400px;
         }
 
-        .vertical-line {
-            position: absolute;
-            top: 50px;
-            left: 400px;
-            width: 12px;
-            height: 410px;
-            background-color: #8b4513;
-            z-index: 2;
+        .text a {
+            color: #8b4513; /* Dark brown color */
+            color: red; /* Bright red color */
+          text-decoration: underline;
         }
-
 
         .hidden {
             display: none;
         }
     </style>
-
-
 </head>
 <body>
     <div class="window-container">
         <div class="window"></div>
         <div class="horizontal-line"></div>
         <div class="vertical-line"></div>
-
-
+        <div class="curtain-top"></div>
+        <div class="curtain-left"></div>
+        <div class="curtain-right"></div>
+        <div class="text">
+            <p>And so, the calendar will stay on November, and I will accidentally write “2023” long into the new year, and I will periodically check in on the coffee tin to make sure its contents remain unchanged. The year remains 2023, the season forever autumn, the days unchanging. I stand still with yesterdays while tomorrows stream by. I cling to what has departed, not yet ready to accept that it is <a href="page5.html">gone.</a>
+        </div>gone.
+    </div>
 
     <script>
         const windowElement = document.querySelector('.window');
@@ -88,8 +108,8 @@
             // Increment seasonIndex or reset to 0 if it exceeds the array length
             seasonIndex = (seasonIndex + 1) % seasons.length;
 
-            // Repeat the process every 3 seconds
-            setTimeout(changeSeason, 2000);
+            // Repeat the process every 2 seconds
+            setTimeout(changeSeason, 1750);
         }
 
         // Start changing the season immediately
