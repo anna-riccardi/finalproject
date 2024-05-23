@@ -29,7 +29,13 @@
             animation: glitch 5s infinite alternate; /* Adjusted animation duration for calendars */
         }
 
-
+        @keyframes glitch {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+            100% {
+                transform: scale(1.1) rotate(3deg);
+            }
         }
     </style>
 </head>
@@ -37,15 +43,28 @@
     <div class="text-container">
         <!-- Static text with links -->
         <span>Okay with looking at my wall in May and seeing a calendar that still reads November.<br>
-        Okay with the <a href="page3b.html" style="color: #009688;">dizzying spiral</a>.<br>
+        Okay with the <a href="page3bb.html" style="color: #009688;">dizzying spiral</a>.<br>
         Okay with the unyielding <a href="page3a.html" style="color: #009688;">march towards nothingness</a>.<br>
     </div>
     <div class="image-container">
-        <img src="calender.jpeg" alt="Image" id="rotatingImage">
+        <img src="nov.jpeg" alt="Image" id="rotatingImage">
     </div>
     <div class="text-container">
+        Okay with calendars that have to change from November to December to May and back again, year in and year out.
+    </div>
 
-        Okay with calendars that have to change from November to December, year in and year out.</span>
+    <script>
+        var image = document.getElementById("rotatingImage");
+        var images = ["nov.jpeg", "dec.jpeg", "may.jpeg", "calender.jpeg"]; // Array of image filenames
+        var currentIndex = 0;
 
+        function switchImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Increment index, loop back to 0 when end is reached
+            image.src = images[currentIndex]; // Change image source
+        }
+
+        // Change image every 3 seconds (3000 milliseconds)
+        setInterval(switchImage, 1000);
+    </script>
 </body>
 </html>

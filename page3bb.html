@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaroid Box</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: #deb887; /* Cardboard color */
+            border: 2px solid #000;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+            z-index: 1; /* Ensure the box stays above other elements */
+        }
+
+        .lid {
+            width: 100%;
+            height: 50px;
+            background-color: #deb887; /* Cardboard color */
+            border-bottom: 2px solid #000;
+            border-radius: 0 0 10px 10px;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            transform-origin: bottom center;
+            animation: openLid 1s forwards;
+            z-index: 2; /* Ensure the lid stays above the box */
+        }
+
+        .link-container {
+            position: absolute;
+            bottom: -50px; /* Adjust the distance from the box */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3; /* Ensure the link container stays above the lid and box */
+        }
+
+        .link {
+            text-decoration: none;
+            color: #333;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .link:hover {
+            background-color: #ddd;
+        }
+
+        @keyframes openLid {
+            0% {
+                transform: rotateX(90deg);
+            }
+            100% {
+                transform: rotateX(0deg);
+            }
+        }
+
+        .label {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4; /* Ensure the label stays above all other elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="lid"></div>
+        <div class="link-container">
+            <a href="page3b.html" class="link">Open Me</a>
+        </div>
+        <div class="label">Polaroids</div>
+    </div>
+</body>
+</html>

@@ -15,13 +15,13 @@
 
         .polaroid {
             position: relative;
-            display: inline-block;
-            margin: 20px;
+            display: none; /* Hide all polaroids by default */
             background-color: #fff;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 240px; /* Adjust the maximum width as needed */
+            margin: 20px auto; /* Center polaroids */
         }
 
         .polaroid::after {
@@ -45,6 +45,24 @@
         .polaroid img {
             max-width: 100%; /* Make sure the image fits within the polaroid */
             height: auto;
+        }
+
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #555;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
         }
     </style>
 </head>
@@ -78,5 +96,29 @@
         <a href="page4.html"><img src="party.jpeg" alt="Image 6"></a>
         <p class="caption"> That nothing is different, and <a href="page4.html"> everything is the same.</a></p>
     </div>
+
+    <!-- Navigation Arrows -->
+    <div class="arrow prev" onclick="prevPolaroid()">&#10094;</div>
+    <div class="arrow next" onclick="nextPolaroid()">&#10095;</div>
+
+    <script>
+        var currentIndex = 0;
+        var polaroids = document.querySelectorAll('.polaroid');
+
+        // Show the first polaroid
+        polaroids[currentIndex].style.display = "block";
+
+        function nextPolaroid() {
+            polaroids[currentIndex].style.display = "none";
+            currentIndex = (currentIndex + 1) % polaroids.length;
+            polaroids[currentIndex].style.display = "block";
+        }
+
+        function prevPolaroid() {
+            polaroids[currentIndex].style.display = "none";
+            currentIndex = (currentIndex - 1 + polaroids.length) % polaroids.length;
+            polaroids[currentIndex].style.display = "block";
+        }
+    </script>
 </body>
 </html>
